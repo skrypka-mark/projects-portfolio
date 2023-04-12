@@ -7,6 +7,10 @@ import LanguageIcon from '@/components/icons/LanguageIcon';
 import GithubIcon from '@/components/icons/GithubIcon';
 import LinkedinIcon from '@/components/icons/LinkedinIcon';
 
+const navigationNavbarLinks = [
+    { link: `/portfolio`, label: `Portfolio` },
+    { link: `/about`, label: `About us` }
+];
 const iconsNavbarList = [
     { label: 'Theme', icon: () => h(ThemeSwitcher, { checked: true }) },
     { label: 'Github', icon: GithubIcon, href: 'https://github.com/skrypka-mark' },
@@ -17,7 +21,7 @@ const iconsNavbarList = [
 <template>
     <Teleport to='body'>
         <header :class='$style.header'>
-            <Navbar :links='[{ link: `/portfolio`, label: `Portfolio` }, { link: `/about`, label: `About us` }]' :stroke=true />
+            <Navbar :links=navigationNavbarLinks :stroke=true />
             <Navbar :class='$style[`icons-navbar`]'>
                 <ul :class='$style[`icons-navbar__list`]'>
                     <li :class='$style[`icons-navbar__item`]'>
