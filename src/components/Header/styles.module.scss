@@ -17,9 +17,17 @@
     }
     &__item {
         display: flex;
-            align-items: center;
-        svg {
-            fill: red;
+        align-items: center;
+
+        & > svg path {
+            transition: $transition;
+        }
+        &:hover {
+            cursor: pointer;
+
+            & > svg path {
+                fill-opacity: 1;
+            }
         }
     }
     & > .separator {
