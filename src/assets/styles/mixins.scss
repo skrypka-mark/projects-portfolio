@@ -1,0 +1,11 @@
+@mixin main-container() {
+    padding-inline: 160px;
+}
+
+@mixin absolute-fill($pos: absolute, $t: 0, $b: 0, $l: 0, $r: 0) {
+    position: $pos;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}

@@ -1,0 +1,16 @@
+<nav :class='$style.navbar'>
+    <ul :class='$style[`navbar-list`]' v-if=!$slot>
+        <li
+            :key=label
+            v-for='{ link, label } in links'
+            :class='$style[`navbar-list__link`]'
+        >
+            <RouterLink :to=link :class='{ [$style[`link-active`]]: $route.path === link }'>
+                {{ label }}
+            </RouterLink>
+        </li>
+    </ul>
+    <div :class='$style.stroke' v-if=stroke />
+    <slot />
+    
+</nav>

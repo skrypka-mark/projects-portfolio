@@ -1,0 +1,31 @@
+.header {
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include main-container;
+}
+
+.icons-navbar {
+    padding: 10px;
+
+    &__list {
+        display: flex;
+        gap: 15px;
+    }
+    &__item {
+        display: flex;
+            align-items: center;
+        svg {
+            fill: red;
+        }
+    }
+    & > .separator {
+        width: 15px;
+        height: 0px;
+        border: .5px solid rgba(255, 255, 255, 0.6);
+        transform: rotate(90deg);
+    }
+}
