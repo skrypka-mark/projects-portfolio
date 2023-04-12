@@ -9,8 +9,8 @@ import LinkedinIcon from '@/components/icons/LinkedinIcon';
 
 const iconsNavbarList = [
     { label: 'Theme', icon: () => h(ThemeSwitcher, { checked: true }) },
-    { label: 'Github', icon: GithubIcon },
-    { label: 'Linkedin', icon: LinkedinIcon }
+    { label: 'Github', icon: GithubIcon, href: 'https://github.com/skrypka-mark' },
+    { label: 'Linkedin', icon: LinkedinIcon, href: 'https://www.linkedin.com/in/mark-skrypka-a19b051bb/' }
 ];
 </script>
 
@@ -29,9 +29,12 @@ const iconsNavbarList = [
                     <li
                         :class='$style[`icons-navbar__item`]'
                         :key=label
-                        v-for='{ label, icon } in iconsNavbarList'
+                        v-for='{ label, icon, href } in iconsNavbarList'
                     >
-                        <component :is=icon />
+                        <a :href=href target='_blank' v-if=!!href>
+                            <component :is=icon />
+                        </a>
+                        <component :is=icon v-else />
                     </li>
                 </ul>
             </Navbar>
