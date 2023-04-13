@@ -12,6 +12,9 @@ import Container from '@/components/Container';
 
 <style lang='scss' scoped>
 .main-layout {
+    display: flex;
+    justify-content: center;
+    padding-top: 55px;
     @include main-container;
 }
 </style>
