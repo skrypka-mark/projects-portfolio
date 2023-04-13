@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 
 import MainLayout from './layouts/main.vue';
 
@@ -14,7 +14,19 @@ import Background from '@/components/Background';
   <MainLayout>
     <RouterView />
   </MainLayout>
+
+  <div class='height-overlay' id='overlay'>
+    <div id='overlay-child' />
+  </div>
 </template>
+
+<style scoped>
+.height-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+</style>
 
 <!-- <style scoped>
 header {

@@ -1,1 +1,3 @@
-<section :class='$style.container'></section>
+<section :class='$style.container' ref=containerRef @scroll.passive=scrollYHandler>
+    <slot />
+</section>
