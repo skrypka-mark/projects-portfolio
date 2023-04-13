@@ -5,12 +5,12 @@
   <main>
     <div class="container">
       <div class="gallery">
-        <img src="../img/Project1.png" alt="" class="title-image-project">
+        <img src="/src/assets/images/Project1.png" alt="" class="title-image-project">
         <div class="image-collage">
-          <img src="../img/Project3.png" alt="" class="gallery-image-project">
-          <img src="../img/Project3.png" alt="" class="gallery-image-project">
-          <img src="../img/Project3.png" alt="" class="gallery-image-project">
-          <img src="../img/Project3.png" alt="" class="gallery-image-project">
+          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
+          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
+          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
+          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
         </div>
       </div>
 
