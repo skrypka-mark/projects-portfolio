@@ -9,15 +9,14 @@ import Background from '@/components/Background';
 
 <template>
   <Background />
+  <div class='height-overlay' id='overlay'>
+    <div id='overlay-child' />
+  </div>
   <Header />
 
   <MainLayout>
     <RouterView />
   </MainLayout>
-
-  <div class='height-overlay' id='overlay'>
-    <div id='overlay-child' />
-  </div>
 </template>
 
 <style scoped>

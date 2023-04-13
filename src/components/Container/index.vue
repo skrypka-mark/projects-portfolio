@@ -5,7 +5,7 @@ const containerRef = ref(null);
 
 const scrollYHandler = () => {
     const overlay = document.getElementById('overlay');
-    containerRef.value.style.top = `${overlay.scrollTop * -1 + 55}px`;
+    containerRef.value.style.top = `${overlay.scrollTop * -1 + 55}px`; // 55 is a container top offset height
 };
 
 onMounted(() => {
