@@ -79,13 +79,14 @@
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   color: var(--color-text);
 
   background: var(--color-background);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: 100%;
+  // background-repeat: no-repeat;
 
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import PortfolioPage from '@/pages/portfolio';
-import AboutPage from '@/pages/about';
-import ProjectPage from '@/pages/project';
+import Portfolio from '@/pages/portfolio';
+import About from '@/pages/about';
+import Project from '@/pages/project';
+import NotFound from '@/pages/not-found';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,20 +14,21 @@ const router = createRouter({
         {
           path: '/portfolio',
           name: 'portfolio',
-          component: PortfolioPage
+          component: Portfolio
         },
         {
           path: '/about',
           name: 'about',
-          component: AboutPage
+          component: About
         },
         {
-          path: '/project',
+          path: '/project/:id',
           name: 'project',
-          component: ProjectPage
-        },
+          component: Project
+        }
       ]
     },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
   ]
 })
 
