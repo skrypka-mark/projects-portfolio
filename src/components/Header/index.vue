@@ -19,7 +19,7 @@ const iconsNavbarList = [
 </script>
 
 <template>
-    <Teleport to='body'>
+    <!-- <Teleport to='body'> -->
         <header :class='$style.header'>
             <Navbar :links=navigationNavbarLinks :stroke=true />
             <Navbar :class='$style[`icons-navbar`]'>
@@ -43,7 +43,7 @@ const iconsNavbarList = [
                 </ul>
             </Navbar>
         </header>
-    </Teleport>
+    <!-- </Teleport> -->
 </template>
 
 <style lang='scss' module src='./styles.module.scss' />

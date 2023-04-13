@@ -1,0 +1,41 @@
+.portfolio-card {
+    width: 100%;
+    margin-bottom: 25px;
+
+	& > .link-image {
+        position: relative;
+        display: block;
+        width: 330px;
+        height: 205px;
+        border-radius: 10px;
+        overflow: hidden;
+
+		border-radius: 10px;
+
+        & > .overlay {
+            transition: .3s ease-out .1s;
+            position: absolute;
+            inset: 0;
+        }
+		&:hover {
+            & > .project-image {
+                scale: 1.05;
+                cursor: pointer;
+                z-index: 2;
+            }
+            & > .overlay {
+                background: rgba(0, 0, 0, .4);
+            }
+        }
+
+        & > .project-image {
+            width: 100%;
+            height: 100%;
+
+            transition: .2s ease-out;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+        }
+	}
+}
