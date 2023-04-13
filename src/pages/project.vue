@@ -43,7 +43,11 @@
   </main>
 </template>
 
-<style>
+<style lang='scss' scoped>
+.container {
+    padding: $container-gap;
+}
+
 .gallery {
   width: 430px;
   height: 550px;
