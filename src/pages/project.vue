@@ -44,6 +44,10 @@
 </template>
 
 <style>
+.container {
+  /* width: 1040px; */
+  margin: 40px 40px 0 40px;
+}
 
 .gallery {
   width: 430px;

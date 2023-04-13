@@ -9,9 +9,9 @@ import Background from '@/components/Background';
 
 <template>
   <Background />
-  <div class='height-overlay' id='overlay'>
+  <!-- <div class='height-overlay' id='overlay'>
     <div id='overlay-child' />
-  </div>
+  </div> -->
   <Header />
 
   <MainLayout>

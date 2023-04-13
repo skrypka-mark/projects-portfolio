@@ -1,119 +1,88 @@
+<script setup>
+import PortfolioCard from '@/components/PortfolioCard';
+
+const projects = [
+	{
+		id: '1',
+		name: 'Name project',
+		image: '/src/assets/images/Project1.png'
+	},
+	{
+		id: '2',
+		name: 'Name project',
+		image: '/src/assets/images/Project2.png'
+	},
+	{
+		id: '3',
+		name: 'Name project',
+		image: '/src/assets/images/Project3.png'
+	},
+	{
+		id: '4',
+		name: 'Name project',
+		image: '/src/assets/images/Project4.png'
+	},
+	{
+		id: '5',
+		name: 'Name project',
+		image: '/src/assets/images/Project5.png'
+	},
+	{
+		id: '6',
+		name: 'Name project',
+		image: '/src/assets/images/Project6.png'
+	},
+	{
+		id: '7',
+		name: 'Name project',
+		image: '/src/assets/images/Project2.png'
+	},
+	{
+		id: '8',
+		name: 'Name project',
+		image: '/src/assets/images/Project3.png'
+	},
+	{
+		id: '9',
+		name: 'Name project',
+		image: '/src/assets/images/Project4.png'
+	},
+	{
+		id: '10',
+		name: 'Name project',
+		image: '/src/assets/images/Project5.png'
+	},
+	{
+		id: '11',
+		name: 'Name project',
+		image: '/src/assets/images/Project6.png'
+	}
+];
+</script>
+
 <template>
-  <div class="container">
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project1.png" alt="project1">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project2.png" alt="project2">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project3.png" alt="project3">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project4.png" alt="project4">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project5.png" alt="project5">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project6.png" alt="project6">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project1.png" alt="project1">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project2.png" alt="project2">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project3.png" alt="project3">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project4.png" alt="project4">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project5.png" alt="project5">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-
-      <div class="projects-container">
-        <a href="" class="image-link">
-          <img class="image-project" src="../img/Project6.png" alt="project6">
-        </a>
-        <p class="title-project">Name project</p>
-      </div>
-    </div>
+	<div class='portfolio-container'>
+		<PortfolioCard :key=project.id v-for='project in projects' v-bind=project />
+	</div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+<style lang='scss' scoped>
+.portfolio-container {
+	--columns-amount: 3;
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 40px 40px 0 40px;
-}
+	display: grid;
+	grid-template-columns: repeat(var(--columns-amount), minmax(262px, 1fr));
+	gap: 20px;
 
-.projects-container {
-  margin-bottom: 25px;
-}
+	// width: 100%;
 
-.image-link {
-  display: block;
-  width: 330px;
-  height: 205px;
-}
+	@media (max-width: 1200px) { --columns-amount: 2; }
+	// @media (max-width: 900px) {
+	// 	--columns-amount: 2;
+	// 	gap: 20px;
+	// }
+	// @media (max-width: 600px) { --columns-amount: 1; }
 
-.image-project {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+	padding: $container-gap;
 }
 </style>

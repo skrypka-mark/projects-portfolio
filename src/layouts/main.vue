@@ -12,6 +12,10 @@ import Container from '@/components/Container';
 
 <style lang='scss' scoped>
 .main-layout {
-    @include main-container;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 55px;
+    // @include main-container;
 }
 </style>
