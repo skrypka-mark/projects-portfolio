@@ -28,17 +28,6 @@ const characteristicsDetails = {
 </script>
 
 <template>
-<<<<<<< HEAD
-  <main>
-    <div class="container">
-      <div class="gallery">
-        <img src="/src/assets/images/Project1.png" alt="" class="title-image-project">
-        <div class="image-collage">
-          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
-          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
-          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
-          <img src="/src/assets/images/Project3.png" alt="" class="gallery-image-project">
-=======
     <div class='container'>
         <div class='gallery'>
             <img :src='galleryImages[0].image' alt='' class='title-image-project' />
@@ -51,7 +40,6 @@ const characteristicsDetails = {
                     alt=''
                 />
             </div>
->>>>>>> dd349d1b29daa1d0ebd70e622c286c100ae436e5
         </div>
 
         <div class='about-project'>
@@ -87,9 +75,6 @@ const characteristicsDetails = {
     </div>
 </template>
 
-<<<<<<< HEAD
-<style>
-=======
 <style lang='scss' scoped>
 .container {
     display: flex;
@@ -97,7 +82,6 @@ const characteristicsDetails = {
     padding: $container-gap;
 }
 
->>>>>>> dd349d1b29daa1d0ebd70e622c286c100ae436e5
 .gallery {
     display: flex;
     flex-direction: column;
