@@ -9,6 +9,9 @@
     display: flex;
     justify-content: space-between;
 
+    padding-inline: $container-gap;
+    z-index: 10;
+
     // @include main-container;
 }
 
